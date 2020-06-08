@@ -6,8 +6,10 @@ dotenv.config();
 const server = express();
 
 const { sequelize, db } = require("./db/connect");
+const seed = require("./db/seed");
 
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: true }).then(async () => {
+  await seed(db);
   console.log("THIS IS THE DB: ", db);
   server.use(bodyParser.urlencoded({ extended: true }));
   server.use(bodyParser.json());
