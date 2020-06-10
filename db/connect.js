@@ -26,6 +26,7 @@ if (NODE_ENV === "production") {
 const db = {
   Bin: sequelize.import("./models/Bin"),
   User: sequelize.import("./models/User"),
+  Area: sequelize.import("./models/Area"),
 };
 
 Object.keys(db).forEach((model) => {

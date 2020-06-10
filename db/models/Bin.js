@@ -7,9 +7,38 @@ module.exports = (sequelize) => {
       primaryKey: true,
       autoIncrement: true,
     },
+    plasticFillLevel: {
+      type: Sequelize.FLOAT,
+    },
+    metalFillLevel: {
+      type: Sequelize.FLOAT,
+    },
+    paperFillLevel: {
+      type: Sequelize.FLOAT,
+    },
+    cardboardFillLevel: {
+      type: Sequelize.FLOAT,
+    },
+    glassFillLevel: {
+      type: Sequelize.FLOAT,
+    },
+    overallFillLevel: {
+      type: Sequelize.FLOAT,
+    },
+    location: {
+      type: Sequelize.STRING,
+    },
+    longitude: {
+      type: Sequelize.STRING,
+    },
+    latitude: {
+      type: Sequelize.STRING,
+    },
   });
 
-  Bin.associate = (models) => {};
+  Bin.associate = (models) => {
+    Bin.belongsTo(models.Area, { foreignKey: "areaId" });
+  };
 
   return Bin;
 };
