@@ -16,7 +16,6 @@ module.exports = (sequelize, db) => {
       return parseFloat(bin.overallFillLevel) > parseFloat(fillLevel);
     });
 
-    console.log("BINS: ", bins);
     res.json({ message: "Bins retrieved.", bins });
   });
 
