@@ -18,7 +18,7 @@ if (NODE_ENV === "production") {
 } else {
   sequelize = new Sequelize(DB_NAME, DB_USERNAME, DB_PASSWORD, {
     host: DB_HOST,
-    dialect: "mysql",
+    dialect: "postgres",
     operatorsAliases: false,
   });
 }
