@@ -11,6 +11,12 @@ module.exports = (sequelize) => {
       type: Sequelize.STRING,
       unique: true,
     },
+    destinationLatitude: {
+      type: Sequelize.STRING,
+    },
+    destinationLongitude: {
+      type: Sequelize.STRING,
+    },
   });
 
   Area.associate = (models) => {};

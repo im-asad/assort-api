@@ -14,10 +14,14 @@ module.exports = async (db) => {
     {
       areaId: 1,
       area: "Bahria Town",
+      destinationLatitude: "33.533463",
+      destinationLongitude: "73.116605",
     },
     {
       areaId: 2,
       area: "F-11",
+      destinationLatitude: "33.703274",
+      destinationLongitude: "72.967801",
     },
   ];
 

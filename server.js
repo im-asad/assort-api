@@ -16,9 +16,11 @@ sequelize.sync({ force: true }).then(async () => {
 
   const authRoutes = require("./routes/auth")(sequelize, db);
   const binRoutes = require("./routes/bin")(sequelize, db);
+  const areaRoutes = require("./routes/area")(sequelize, db);
 
   server.use(authRoutes);
   server.use(binRoutes);
+  server.use(areaRoutes);
 
   server.listen(8080, () => {
     console.log("SERVER LISTENING");
