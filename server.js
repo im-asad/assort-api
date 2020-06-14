@@ -22,7 +22,7 @@ sequelize.sync({ force: true }).then(async () => {
   server.use(binRoutes);
   server.use(areaRoutes);
 
-  server.listen(8080, () => {
+  server.listen(8000, () => {
     console.log("SERVER LISTENING");
   });
 });
