@@ -10,7 +10,6 @@ const seed = require("./db/seed");
 
 sequelize.sync({ force: true }).then(async () => {
   await seed(db);
-  console.log("THIS IS THE DB: ", db);
   server.use(bodyParser.urlencoded({ extended: true }));
   server.use(bodyParser.json());
 
@@ -22,7 +21,7 @@ sequelize.sync({ force: true }).then(async () => {
   server.use(binRoutes);
   server.use(areaRoutes);
 
-  server.listen(8000, () => {
+  server.listen(8080, () => {
     console.log("SERVER LISTENING");
   });
 });
